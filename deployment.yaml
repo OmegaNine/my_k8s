@@ -10,7 +10,7 @@ spec:
   source: 
     repoURL: https://github.com/OmegaNine/my_k8s.git
     targetRevision: main
-    #path:
+    path: pgadmin
 
   destination:
     server: https://kubernestes.default.scv
