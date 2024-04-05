@@ -1,0 +1,25 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pgadmin-aprggo-application
+  namespace: argocd
+
+spec:
+  project: default
+  source: 
+    repoURL: https://github.com/OmegaNine/my_k8s.git
+    targetRevision: HEAD
+    #path:
+
+  destination:
+    server: https://kubernestes.default.scv
+    namespace: pgadmin
+
+  syncPolicy:
+    suncOptions:
+    - CreateNamespace=true
+
+  automated:
+    selfHeal: true
+    prune: true
