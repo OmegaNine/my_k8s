@@ -23,5 +23,6 @@ spec:
         ports:
         - containerPort: 5432
         resources:
-        limits:
-          memory: 4Gi
+          limits:
+            memory: 4Gi
+            cpu: 1
