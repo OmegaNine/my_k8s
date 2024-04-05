@@ -13,7 +13,7 @@ spec:
     path: pgadmin
 
   destination:
-    server: https://kubernetes.default.scv
+    server: https://kubernetes.default.svc
     namespace: pgadmin
 
   syncPolicy:
