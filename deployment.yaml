@@ -9,7 +9,7 @@ spec:
   project: default
   source: 
     repoURL: https://github.com/OmegaNine/my_k8s.git
-    targetRevision: HEAD
+    targetRevision: main
     #path:
 
   destination:
