@@ -18,8 +18,16 @@ spec:
         image: postgres:16.0
         imagePullPolicy: Always
         env:
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: postgress-secrets
+              key: postgres-root-username
         - name: POSTGRES_PASSWORD
-          value: "postgres"
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secrets
+              key: postgres-root-password
         ports:
         - containerPort: 5432
         resources:
