@@ -26,12 +26,16 @@ spec:
         resources:
           limits:
             memory: 500Mi
-            cpu: 500m
+            cpu: 500m  
         volumeMounts:
          - name: pgadmin-config
            mountPath: /pgadmin4/
            subPath: servers.json
            readOnly: true
+      volumes:
+      - name: pgadmin-config
+        configMap:
+          name: pgadmin-config
 ---
 apiVersion: v1
 kind: Service
