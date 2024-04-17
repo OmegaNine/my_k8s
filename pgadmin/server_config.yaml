@@ -3,18 +3,18 @@ kind: ConfigMap
 metadata:
   name: pgadmin-config
   namespace: pgadmin
-  data:
-    servers.json: |
-      {
-          "Servers": {
-            "1": {
-              "Name": "PostgreSQL DB",
-              "Group": "Servers",
-              "Port": 5432,
-              "Username": "root",
-              "Host": "10.105.151.9",
-              "SSLMode": "prefer",
-              "MaintenanceDB": "postgres"
-            }
+data:
+  servers.json: |
+    {
+        "Servers": {
+          "1": {
+            "Name": "PostgreSQL DB",
+            "Group": "Servers",
+            "Port": 5432,
+            "Username": "root",
+            "Host": "10.105.151.9",
+            "SSLMode": "prefer",
+            "MaintenanceDB": "postgres"
           }
-      }
+        }
+    }
