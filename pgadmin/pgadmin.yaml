@@ -30,7 +30,6 @@ spec:
         volumeMounts:
          - name: pgadmin-config
            mountPath: /pgadmin4/servers.json
-           subPath: servers.json
            readOnly: true
       volumes:
       - name: pgadmin-config
