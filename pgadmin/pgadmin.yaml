@@ -23,7 +23,7 @@ spec:
               name: pgadmin-secret
               key: pgadmin-emai
         - name: PGADMIN_DEFAULT_PASSWORD
-          alueFrom:
+          valueFrom:
             secretKeyRef:
               name: pgadmin-secret
               key: pgadmin-password
