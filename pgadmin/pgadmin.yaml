@@ -18,9 +18,15 @@ spec:
         imagePullPolicy: Always
         env:
         - name: PGADMIN_DEFAULT_EMAIL
-          value: "omeganine@gmail.com"
+          valueFrom:
+            secretKeyRef:
+              name: pgadmin-secret
+              key: pgadmin-emai
         - name: PGADMIN_DEFAULT_PASSWORD
-          value: "strongpassword"
+          alueFrom:
+            secretKeyRef:
+              name: pgadmin-secret
+              key: pgadmin-password
         ports:
         - containerPort: 80
         resources:
